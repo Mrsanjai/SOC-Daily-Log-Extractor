@@ -20,6 +20,7 @@ README.md	This documentation
 🖼 Screenshots
 📌 HTML Showcase
 day1_code_showcase.html – Clean structure with code blocks, input/output view, and explanation
+
 ![image](https://github.com/user-attachments/assets/357ff1d1-64b3-460d-8bc5-2a3a40de46fe)
 ![image](https://github.com/user-attachments/assets/b6d0e0ad-5767-422c-864e-56f42c580bf1)
 ![image](https://github.com/user-attachments/assets/4d9b770a-e39c-4859-988a-0b1c4f7c6504)
