@@ -1,0 +1,2 @@
+[ERROR] Cannot connect to database.
+[FAIL] Password incorrect.
