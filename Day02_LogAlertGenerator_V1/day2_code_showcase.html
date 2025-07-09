@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day 2 – Log Alert Generator V1</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4f6f8;
+      padding: 30px;
+      color: #333;
+    }
+    h1 {
+      color: #d62828;
+      font-size: 2em;
+    }
+    .section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: "Courier New", monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Day 2 – Log Alert Generator V1</h1>
+
+  <div class="section">
+    <h2>🔍 Project Overview</h2>
+    <p>This mini project is a Python-based log file scanner that detects suspicious entries like failed login attempts, unauthorized access, or root usage. Alerts are printed to the console and saved to a separate file.</p>
+  </div>
+
+  <div class="section">
+    <h2>📥 Sample Input (`system.log`)</h2>
+    <pre><code>
+Jul 9 08:22:35 server sshd[12345]: Failed password for invalid user root from 192.168.1.100
+Jul 9 08:22:37 server sshd[12346]: Accepted password for admin from 192.168.1.101
+Jul 9 08:22:40 server sshd[12347]: Unauthorized access attempt from 192.168.1.105
+    </code></pre>
+  </div>
+
+  <div class="section">
+    <h2>🚨 Output (`alerts_output.txt`)</h2>
+    <pre><code>
+[ALERT] Suspicious activity detected: Jul 9 08:22:35 server sshd[12345]: Failed password for invalid user root from 192.168.1.100
+[ALERT] Suspicious activity detected: Jul 9 08:22:40 server sshd[12347]: Unauthorized access attempt from 192.168.1.105
+    </code></pre>
+  </div>
+
+  <div class="section">
+    <h2>💻 Python Code (`log_alert_generator_v1.py`)</h2>
+    <pre><code>
+alert_keywords = ["Failed password", "unauthorized", "Invalid user", "root login"]
+
+with open("system.log", "r") as logfile, open("alerts_output.txt", "w") as alertfile:
+    for line in logfile:
+        for keyword in alert_keywords:
+            if keyword.lower() in line.lower():
+                alert_msg = f"[ALERT] Suspicious activity detected: {line.strip()}"
+                print(alert_msg)
+                alertfile.write(alert_msg + "\n")
+                break
+    </code></pre>
+  </div>
+
+  <div class="section">
+    <h2>📌 Summary</h2>
+    <p>This script scanned the system log file, detected keywords like <strong>"Failed password"</strong> or <strong>"unauthorized"</strong>, and stored only the suspicious lines as alerts. It builds fundamental SOC skills: log analysis, keyword matching, and security automation.</p>
+  </div>
+
+</body>
+</html>
