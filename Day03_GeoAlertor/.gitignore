@@ -1,0 +1,15 @@
+# Ignore Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+
+# Ignore output files
+output/geo_alerts.txt
+output/geo_alerts_report.html
+
+# Ignore temporary files
+*.log
+.DS_Store
