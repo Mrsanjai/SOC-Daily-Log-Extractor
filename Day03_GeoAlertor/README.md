@@ -19,18 +19,31 @@
 
 ## 📂 Folder Structure
 Day03_GeoAlertor/
+
 ├── core/
+
 │ └── log_geo_alertor.py
+
 ├── input/
+
 │ └── login.log
+
 ├── output/
+
 │ ├── geo_alerts.txt
+
 │ └── geo_alerts_report.html
+
 ├── templates/
+
 │ └── geo_alert_template.html
+
 ├── README.md
+
 ├── requirements.txt
+
 └── .gitignore
+
 
 
 ---
