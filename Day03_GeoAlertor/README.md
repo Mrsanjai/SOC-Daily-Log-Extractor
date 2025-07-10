@@ -48,6 +48,10 @@ python log_geo_alertor.py
 
 pip install -r requirements.txt
 
+Screenshot:
+
+![log1](https://github.com/user-attachments/assets/74266c4a-e66b-465f-8302-36ca08650cd0)
+![log](https://github.com/user-attachments/assets/b7acd937-e723-4eaf-b494-b0469caaf046)
 
 🌐 API Used
 ip-api.com – Free IP Geolocation API
