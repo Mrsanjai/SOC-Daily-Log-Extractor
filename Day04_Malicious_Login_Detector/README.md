@@ -21,6 +21,10 @@ output/
 
 
 ---
+![2](https://github.com/user-attachments/assets/79981e71-d001-4097-9e56-26ed1bb59d3a)
+![1](https://github.com/user-attachments/assets/3541adab-6ed3-4ef1-9e6e-7619c290dd32)
+
+
 
 ### 🛠️ Tech Stack
 - Python (Flask, Socket.IO)
