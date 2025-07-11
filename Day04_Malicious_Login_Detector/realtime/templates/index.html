@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div class="container mt-5">
+    <!-- Title -->
+    <h2 class="text-center mb-4 animated-title">🚨 Malicious Login Detection Dashboard</h2>
+
+    <!-- Stats Box -->
+    <div class="row text-center mb-5">
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <h4>Total Alerts</h4>
+                <p>{{ stats.total_alerts }}</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <h4>Unique IPs</h4>
+                <p>{{ stats.unique_ips }}</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <h4>Alert Types</h4>
+                <p>{{ stats.types | length }}</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <h4>Types</h4>
+                <p>{{ stats.types | join(', ') }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert Cards -->
+    <div class="alert-grid">
+        {% for alert in alerts %}
+        <div class="alert-card fade-in" data-type="{{ alert.type }}">
+            <h5>{{ alert.type }}</h5>
+            <p><strong>IP:</strong> {{ alert.ip }}</p>
+            {% if alert.fail_count %}
+                <p><strong>Failures:</strong> {{ alert.fail_count }}</p>
+            {% endif %}
+            {% if alert.line %}
+                <p class="log-line"><code>{{ alert.line }}</code></p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Socket.IO for Realtime -->
+<script src="https://cdn.socket.io/4.3.2/socket.io.min.js"></script>
+<script>
+const socket = io();
+socket.on('new_alert', function(alert) {
+    const card = document.createElement('div');
+    card.className = 'alert-card fade-in';
+    card.setAttribute('data-type', alert.type);
+    card.innerHTML = `
+        <h5>${alert.type}</h5>
+        <p><strong>IP:</strong> ${alert.ip}</p>
+        ${alert.fail_count ? `<p><strong>Failures:</strong> ${alert.fail_count}</p>` : ""}
+        ${alert.line ? `<p class="log-line"><code>${alert.line}</code></p>` : ""}
+    `;
+    document.querySelector('.alert-grid').prepend(card);
+});
+</script>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+[
+  {
+    "type": "Failed SSH Login",
+    "ip": "192.168.1.10",
+    "fail_count": 5,
+    "line": "Jul 11 15:32:45 sshd[2222]: Failed password for root from 192.168.1.10 port 54321 ssh2"
+  }
+]
