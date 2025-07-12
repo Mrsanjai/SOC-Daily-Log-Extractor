@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Threat Pattern Visualizer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1 class="glow">⚠ Threat Pattern Visualizer Dashboard ⚠</h1>
+
+    <div class="cards">
+      <div class="card">
+        <h2>Alert Type Distribution</h2>
+        <img src="{{ url_for('static', filename='images/alert_pie.png') }}" alt="Pie Chart" />
+      </div>
+      <div class="card">
+        <h2>Alert Timeline</h2>
+        <img src="{{ url_for('static', filename='images/alert_timeline.png') }}" alt="Timeline Chart" />
+      </div>
+    </div>
+
+    <div class="table-section">
+      <h2 class="glow-small">📋 Detected Alerts</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Type</th>
+            <th>IP/User</th>
+            <th>Description</th>
+            <th>Severity</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for alert in alerts %}
+          <tr>
+            <td>{{ alert.timestamp }}</td>
+            <td>{{ alert.alert_type }}</td>
+            <td>{{ alert.ip or alert.user or 'N/A' }}</td>
+            <td>{{ alert.description }}</td>
+            <td class="{{ alert.severity }}">{{ alert.severity|capitalize }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
