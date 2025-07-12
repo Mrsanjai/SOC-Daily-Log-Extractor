@@ -23,7 +23,9 @@ All alerts are visualized in a stunning dark-themed web dashboard with animated 
 
 📸 Screenshots
 🔶 Alert Dashboard – Professional UI
-<img src="static/images/alert_pie.png" width="400"> <img src="static/images/alert_timeline.png" width="400">
+
+<img src="static/images/alert_pie.png" width="400">
+<img src="static/images/alert_timeline.png" width="400">
 
 Day05_Threat_Pattern_Analyzer_Web/
 
