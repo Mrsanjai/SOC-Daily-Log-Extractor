@@ -127,9 +127,13 @@ python main.py
 ```
 
 
+<img width="1920" height="1005" alt="log1" src="https://github.com/user-attachments/assets/6272efae-26a8-4d82-9e5a-105d394d7bb6" />
 
 
 💡 Future Enhancements
+
+
+
 
 * 🧠 NLP-based log content classification
 * 📊 Dashboard with charts (using Chart.js or Dash)
