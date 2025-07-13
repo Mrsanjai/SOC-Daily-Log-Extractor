@@ -1,0 +1,32 @@
+<!-- webapp/templates/dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 06 – IOC + ML Alert Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/js/refresh.js" defer></script>
+</head>
+<body>
+    <h1>🚨 Live Alert Dashboard</h1>
+    <p>Monitoring logs for IOC + Anomaly-based detections</p>
+    
+    <table id="alert-table">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Type</th>
+                <th>IOC</th>
+                <th>Summary</th>
+                <th>Tactic</th>
+                <th>Technique</th>
+                <th>Severity</th>
+            </tr>
+        </thead>
+        <tbody id="alert-body">
+            <!-- Filled dynamically -->
+        </tbody>
+    </table>
+</body>
+</html>

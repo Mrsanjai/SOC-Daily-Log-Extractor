@@ -1,0 +1,16 @@
+EventID:1 Image: C:\Windows\System32\svchost.exe User: NT AUTHORITY\SYSTEM
+EventID:1 Image: C:\Windows\System32\cmd.exe CommandLine: cmd.exe /c net user admin Pass123 /add
+EventID:1 Image: C:\Windows\System32\powershell.exe CommandLine: powershell -EncodedCommand aGVsbG8gd29ybGQ=
+EventID:1 Image: C:\Windows\System32\notepad.exe
+EventID:1 Image: C:\Windows\System32\ftp.exe CommandLine: ftp 192.168.1.100
+EventID:1 Image: C:\Windows\System32\curl.exe CommandLine: curl http://malicious.example.com
+EventID:1 Image: C:\Windows\System32\rundll32.exe CommandLine: rundll32.exe malicious.dll,EntryPoint
+EventID:1 Image: C:\Windows\System32\mimikatz.exe
+EventID:1 Image: C:\Windows\System32\nmap.exe CommandLine: nmap -sS 10.0.0.1
+EventID:1 Image: C:\Program Files\Google\Chrome\Application\chrome.exe
+EventID:1 Image: C:\Windows\System32\svchost.exe
+EventID:1 Image: C:\Windows\System32\notepad.exe
+powershell -EncodedCommand aGVsbG8gd29ybGQ=
+mimikatz running...
+this is a very suspicious line that should trigger ML anomaly detection
+
