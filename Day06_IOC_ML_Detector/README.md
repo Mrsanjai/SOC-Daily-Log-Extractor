@@ -1,6 +1,6 @@
 
 ```markdown
-# 🚨 Day 06 – IOC + ML-Based Real-Time Log Anomaly Detector
+ 🚨 Day 06 – IOC + ML-Based Real-Time Log Anomaly Detector
 
 This project is a **real-time cybersecurity detection tool** that monitors **Sysmon logs** for suspicious activity using:
 
@@ -9,36 +9,53 @@ This project is a **real-time cybersecurity detection tool** that monitors **Sys
 - 🧠 Continuous log monitoring and alert generation
 - 📂 Alerts stored in `alerts.json` for UI or API consumption
 
----
 
-## 📁 Project Structure
 
-```
+ 📁 Project Structure
+
+
 
 Day06\_IOC\_ML\_Detector/
+
 ├── main.py                    ← Real-time monitor (IOC + ML)
+
 ├── ioc\_detector.py           ← IOC keyword detection logic
+
 ├── anomaly\_detector.py       ← Machine Learning model
+
 ├── utils.py                  ← Alert saving and helpers
+
 ├── alerts.json               ← All generated alerts stored here
+
 ├── logs/
+
 │   └── sysmon\_live.log       ← Live Sysmon export file
+
 ├── webapp/
+
 │   ├── app.py                ← Flask web UI (optional)
+
 │   ├── templates/
+
 │   │   └── dashboard.html
+
 │   └── static/
+
 │       ├── style.css
+
 │       └── js/
+
 │           └── refresh.js
+
 ├── sysmon\_export.ps1         ← PowerShell: Exports Sysmon logs
+
 └── README.md                 ← You're here!
 
 ````
 
 ---
 
-## 🔧 How It Works
+🔧 How It Works
 
 1. **Sysmon Export:**
    - A PowerShell script continuously extracts logs from `Microsoft-Windows-Sysmon/Operational`.
@@ -57,14 +74,14 @@ Day06\_IOC\_ML\_Detector/
 
 ---
 
-## 🚀 Run the System
+🚀 Run the System
 
-### Step 1 – Start Sysmon Export (in PowerShell)
+ Step 1 – Start Sysmon Export (in PowerShell)
 ```powershell
 powershell -ExecutionPolicy Bypass -File sysmon_export.ps1
 ````
 
-### Step 2 – Start the IOC + ML Detector
+Step 2 – Start the IOC + ML Detector
 
 ```bash
 python main.py
@@ -75,7 +92,7 @@ python main.py
 
 ---
 
-## 🧠 IOC Keywords Used
+🧠 IOC Keywords Used
 
 | Keyword    | Tactic            | Technique | Severity |
 | ---------- | ----------------- | --------- | -------- |
@@ -90,7 +107,7 @@ python main.py
 
 ---
 
-## 🧠 ML Model Used
+🧠 ML Model Used
 
 * **Isolation Forest**
 * Features based on **log line length**
@@ -100,7 +117,7 @@ python main.py
 
 ---
 
-## 📌 Sample Output
+📌 Sample Output
 
 ```plaintext
 [*] Starting IOC + ML Detector...
@@ -109,18 +126,20 @@ python main.py
 [ML ALERT] 🤖 ML anomaly detected: suspicious base64 command detected...
 ```
 
----
 
-## 💡 Future Enhancements
+
+
+💡 Future Enhancements
 
 * 🧠 NLP-based log content classification
 * 📊 Dashboard with charts (using Chart.js or Dash)
 * 🔗 REST API for integration with SIEM/SOAR
 * 📲 Slack / Email / Telegram Alerting
 
----
 
-## 📚 Credits
+
+
+ 📚 Credits
 
 * Developed by: **Sanjai R**
 * Project Day: **Day 06 – SOC Job Attack Mode**
