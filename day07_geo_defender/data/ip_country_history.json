@@ -1,0 +1,19 @@
+{
+    "admin": [
+        "The Netherlands",
+        "United States",
+        "Australia",
+        "Switzerland",
+        "Germany"
+    ],
+    "guest": [
+        "Costa Rica",
+        "United States"
+    ],
+    "analyst": [
+        "United States"
+    ],
+    "root": [
+        "France"
+    ]
+}
