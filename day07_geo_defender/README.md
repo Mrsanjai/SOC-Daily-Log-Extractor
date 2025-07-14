@@ -57,8 +57,7 @@ day07_geo_defender/
 
 │   └── dashboard.html            # Beautiful Soft UI + map dashboard  
 
-└── utils/  
-
+└── utils
     └── geoip_lookup.py           # Gets country, lat, lon from IP  
     
 
@@ -82,14 +81,23 @@ day07_geo_defender/
  🧪 Sample Log Format
 
 [2025-07-14 15:30:18] user=admin, ip=91.132.136.26, status=success
+
 [2025-07-14 11:45:12] user=guest, ip=201.202.134.15, status=success
+
 [2025-07-14 12:10:47] user=admin, ip=66.249.64.14, status=success
+
 [2025-07-14 13:18:19] user=admin, ip=37.120.234.110, status=success
+
 [2025-07-14 14:05:50] user=analyst, ip=190.92.153.34, status=success
+
 [2025-07-14 14:45:32] user=root, ip=62.210.105.116, status=success
+
 [2025-07-14 15:30:18] user=admin, ip=91.132.136.26, status=success
+
 [2025-07-14 16:11:00] user=admin, ip=185.220.101.55, status=success
+
 [2025-07-14 17:44:10] user=guest, ip=209.141.36.4, status=success
+
 ---
 
  ▶️ How to Run
