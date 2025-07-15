@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day 8 – IP Frequency Heatmap</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0f111a;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f1f1f1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 40px;
+      color: #58a6ff;
+      text-shadow: 0 0 10px #58a6ff;
+    }
+
+    .card {
+      background: #161b22;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(88, 166, 255, 0.15);
+      padding: 30px;
+      margin-bottom: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 30px rgba(88, 166, 255, 0.25);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border-bottom: 1px solid #2c303a;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      color: #58a6ff;
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+
+    td {
+      font-size: 14px;
+    }
+
+    .risk-high {
+      color: #f85149;
+      font-weight: bold;
+    }
+
+    .risk-medium {
+      color: #d29922;
+      font-weight: bold;
+    }
+
+    .risk-low {
+      color: #2ea043;
+      font-weight: bold;
+    }
+
+    canvas {
+      background-color: #0f111a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">📶 IP Frequency Heatmap – Suspicious Repetition Detector</div>
+
+    <div class="card">
+      <canvas id="ipChart" height="300"></canvas>
+    </div>
+
+    <div class="card">
+      <h3 style="color:#58a6ff; margin-bottom: 20px;">Top IPs Detected</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>IP Address</th>
+            <th>Frequency</th>
+            <th>Risk Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>185.103.196.254</td>
+            <td>12</td>
+            <td class="risk-high">🔴 High</td>
+          </tr>
+          <tr>
+            <td>103.75.198.120</td>
+            <td>6</td>
+            <td class="risk-medium">🟠 Medium</td>
+          </tr>
+          <tr>
+            <td>192.168.1.10</td>
+            <td>3</td>
+            <td class="risk-low">🟢 Low</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('ipChart');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['185.103.196.254', '103.75.198.120', '192.168.1.10'],
+        datasets: [{
+          label: 'IP Frequency',
+          data: [12, 6, 3],
+          backgroundColor: [
+            'rgba(248, 81, 73, 0.8)',
+            'rgba(210, 153, 34, 0.8)',
+            'rgba(46, 160, 67, 0.8)'
+          ],
+          borderRadius: 10,
+          barThickness: 30
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        plugins: {
+          legend: {
+            labels: {
+              color: '#f1f1f1',
+              font: { size: 14 }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#f1f1f1'
+            },
+            grid: {
+              color: '#2c303a'
+            }
+          },
+          y: {
+            ticks: {
+              color: '#f1f1f1'
+            },
+            grid: {
+              color: '#2c303a'
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
