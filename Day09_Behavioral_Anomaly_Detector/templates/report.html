@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Behavioral Anomaly Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>🧠 Behavioral Anomaly Detection Dashboard</h1>
+    <p>This live dashboard shows anomalies in login times per user.</p>
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Timestamp</th>
+            <th>Normal Range</th>
+            <th>Anomaly</th>
+        </tr>
+        {% for row in data %}
+        <tr class="{{ 'yes' if row['anomaly'] == '✅ Yes' else 'no' }}">
+            <td>{{ row['username'] }}</td>
+            <td>{{ row['timestamp'] }}</td>
+            <td>{{ row['normal_range'] }}</td>
+            <td>{{ row['anomaly'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
