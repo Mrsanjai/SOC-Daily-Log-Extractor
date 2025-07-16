@@ -38,12 +38,11 @@ An `anomalies.csv` file is generated with:
 
  ▶️ How to Run
 
-```bash
+bash
 pip install -r requirements.txt
 python behavioral_analyzer.py
 
 
----
 
 ✅ 5. `requirements.txt`
 
@@ -51,9 +50,9 @@ pandas
 
 Screenshot:
 
+<img width="1920" height="1023" alt="2" src="https://github.com/user-attachments/assets/7d65b64f-02a7-428d-9d06-e830be4677db" />
+<img width="1920" height="1007" alt="1" src="https://github.com/user-attachments/assets/98393a86-edc6-4feb-b5c2-86875c742cb3" />
 
-
----
 
 By Sanjai.R,
 LINKEDIN - www.linkedin.com/in/sanjai-r-60676126b
