@@ -3,11 +3,11 @@
 📌 Project Description
 A Python + Flask-based SOC detection tool that scans USB activity logs for suspicious device insertions and off-hour access patterns.
 
-Designed to simulate endpoint defense against **Rubber Ducky**, **MalDuino**, and other **HID spoofing attacks** using real-world tactics.
+Designed to simulate endpoint defence against **Rubber Ducky**, **MalDuino**, and other **HID spoofing attacks** using real-world tactics.
 
 🚀 Features
 - 🖥 Upload `.log` file via web UI
-- ⚠ Detect unauthorized USB insertions (based on VID/PID)
+- ⚠ Detect unauthorised USB insertions (based on VID/PID)
 - ⏰ Flag activity outside business hours (9 AM – 7 PM)
 - 📂 Log alerts to `alerts_output.txt`
 - 🎨 Clean Soft UI dashboard
@@ -51,14 +51,20 @@ Day10_USB_Attack_Detector/
 - Sysmon-style log simulation
 
 📸 UI Preview
+<img width="1920" height="1011" alt="2" src="https://github.com/user-attachments/assets/f6c4e172-2c6a-49cf-82e0-46744da86247" />
+
+<img width="1920" height="1017" alt="3" src="https://github.com/user-attachments/assets/a28c2456-f7f6-4dcb-b831-a80561f31075" />
+
 
 🧠 Ideal For
 - SOC Analyst portfolio projects
 - SIEM & endpoint detection practice
 - Cybersecurity interview preparation
 
+
 📦 How to Run
-```bash
+
+bash
 pip install flask
 python app.py
 
