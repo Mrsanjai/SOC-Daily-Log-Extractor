@@ -1,0 +1,9 @@
+{
+  "suspicious_devices": [
+    { "vendor_id": "0BAD", "product_id": "C0DE", "label": "Rubber Ducky" },
+    { "vendor_id": "1FC9", "product_id": "0083", "label": "Bash Bunny" },
+    { "vendor_id": "16D0", "product_id": "0F3B", "label": "MalDuino" },
+    { "vendor_id": "03F0", "product_id": "0024", "label": "Untrusted HP Device" },
+    { "vendor_id": "DEAD", "product_id": "BEEF", "label": "Custom HID Injector" }
+  ]
+}

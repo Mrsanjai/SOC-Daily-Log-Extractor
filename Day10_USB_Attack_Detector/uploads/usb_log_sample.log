@@ -1,0 +1,6 @@
+2025-07-16 11:23:01, USB Inserted, Device Name: Kingston, VID: 0951, PID: 1666, User: user1
+2025-07-16 03:15:42, USB Inserted, Device Name: Unknown, VID: 0BAD, PID: C0DE, User: admin
+2025-07-16 18:55:22, USB Inserted, Device Name: Sandisk, VID: 0781, PID: 5567, User: user2
+2025-07-16 02:03:11, USB Inserted, Device Name: MalDuino, VID: 16D0, PID: 0F3B, User: attacker
+2025-07-16 14:10:11, USB Removed, Device Name: Kingston, User: user1
+2025-07-16 20:35:10, USB Inserted, Device Name: Unknown, VID: DEAD, PID: BEEF, User: guest

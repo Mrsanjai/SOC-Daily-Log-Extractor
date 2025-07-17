@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>USB Attack Detector - Day 10</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🛡️ USB Attack Detector</h1>
+    <form method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".log">
+      <br>
+      <button type="submit">Upload & Scan</button>
+    </form>
+
+    {% if alerts %}
+    <div class="alerts">
+      <h2>🔍 Scan Results</h2>
+      {% for alert in alerts %}
+        <div class="alert-box {% if '✅' in alert %}success-box{% endif %}">
+          {{ alert }}
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+⚠️ 2025-07-16 03:15:42: Suspicious device detected (Rubber Ducky) by admin - VID:0BAD, PID:C0DE
+⏰ 2025-07-16 03:15:42: USB inserted outside business hours by admin - Device: Unknown
+⚠️ 2025-07-16 02:03:11: Suspicious device detected (MalDuino) by attacker - VID:16D0, PID:0F3B
+⏰ 2025-07-16 02:03:11: USB inserted outside business hours by attacker - Device: MalDuino
+⚠️ 2025-07-16 20:35:10: Suspicious device detected (Custom HID Injector) by guest - VID:DEAD, PID:BEEF
+⏰ 2025-07-16 20:35:10: USB inserted outside business hours by guest - Device: Unknown
